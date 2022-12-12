@@ -1,0 +1,76 @@
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+/* Nav bar section */
+#navbar {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #1f2327;
+  padding-block: 15px;
+}
+#navbar ul {
+  flex-direction: row;
+}
+.navitems {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+/* All pages */
+#home,
+#AllQoutes,
+#SearchQoutes,
+#SearchAuthors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #1f2327, #5fa2d8);
+  height: 75vh;
+}
+#footer {
+  background-image: linear-gradient(to top, #1f2327, #5fa2d8);
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  height: 20vh;
+}
+#footer p {
+  color: #fff;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+/* Home page */
+#home {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+#home h1 {
+  margin: 0;
+}
+@media (max-width: 550px) {
+  #navbar{
+    flex-direction: row;
+  }
+  .navitems{
+    font-size: 1rem;
+  }
+}
+@media (max-width: 400px) {
+  #home h1{
+      font-size: 1.5rem;
+  }
+  #home h2{
+      font-size: 1.25rem;
+  }
+  #home h3{
+      font-size: 1rem;
+  }
+}
