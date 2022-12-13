@@ -1,6 +1,11 @@
+/* General */
+::-webkit-scrollbar {
+  display: none;
+}
 body {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
+
 /* Nav bar section */
 #navbar {
   display: flex;
@@ -21,7 +26,7 @@ body {
   font-size: 1.5rem;
 }
 
-/* All pages */
+/* All pages Setup */
 #home,
 #AllQoutes,
 #SearchQoutes,
@@ -30,7 +35,7 @@ body {
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(to bottom, #1f2327, #5fa2d8);
-  height: 75vh;
+  height: 100vh;
 }
 #footer {
   background-image: linear-gradient(to top, #1f2327, #5fa2d8);
@@ -42,10 +47,7 @@ body {
   justify-content: space-around;
   height: 20vh;
 }
-#footer p {
-  color: #fff;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
+
 /* Home page */
 #home {
   display: flex;
@@ -56,21 +58,71 @@ body {
   margin: 0;
 }
 @media (max-width: 550px) {
-  #navbar{
+  #navbar {
     flex-direction: row;
   }
-  .navitems{
+  .navitems {
     font-size: 1rem;
   }
 }
 @media (max-width: 400px) {
-  #home h1{
-      font-size: 1.5rem;
+  #home h1 {
+    font-size: 1.5rem;
   }
-  #home h2{
-      font-size: 1.25rem;
+  #home h2 {
+    font-size: 1.25rem;
   }
-  #home h3{
-      font-size: 1rem;
+  #home h3 {
+    font-size: 1rem;
   }
+}
+
+/* All Quotes Section */
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#AllQoutes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 60px;
+  overflow: auto;
+  padding: 2rem;
+}
+.quotebox {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 200px;
+  max-height: 200px;
+  min-height: 200px;
+  background-image: linear-gradient(to top, #5c86a8, #71a2ca);
+}
+.quotebox h3 {
+  font-size: 1.5rem;
+}
+.quotebox p {
+  font-size: 1.3rem;
+  color: white;
+  font-weight: bolder;
+}
+
+/* Footer Section */
+#footer p {
+  color: #fff;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }

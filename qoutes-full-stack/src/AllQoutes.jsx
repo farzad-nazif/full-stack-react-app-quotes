@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import QuotesBox from "./QuotesBox";
 
 function AllQoutes() {
   const [data, setData] = useState([]);
@@ -10,9 +11,13 @@ function AllQoutes() {
   }, []);
   return (
     <div id="AllQoutes">
-      {data.map((quote) => {
-        return <p>{quote.quote}</p>;
-      })}
+      {data.length === 0 ? (
+        <div class="loader"></div>
+      ) : (
+        data.map((quote) => {
+          return <QuotesBox quote={quote.quote} author={quote.author} />;
+        })
+      )}
     </div>
   );
 }
