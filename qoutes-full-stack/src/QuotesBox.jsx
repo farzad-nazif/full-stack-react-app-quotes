@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-function QuotesBox({ quote , author }) {
+function QuotesBox({ quote, author }) {
   return (
     <div className="quotebox">
       <h3>{quote}</h3>
@@ -9,4 +9,4 @@ function QuotesBox({ quote , author }) {
   );
 }
 
-export default QuotesBox
+export default QuotesBox;

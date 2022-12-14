@@ -16,6 +16,8 @@ body {
   justify-content: space-around;
   background-color: #1f2327;
   padding-block: 15px;
+  padding-top: 2rem;
+  gap: 2rem;
 }
 #navbar ul {
   flex-direction: row;
@@ -25,12 +27,18 @@ body {
   color: #fff;
   font-size: 1.5rem;
 }
+.navitems:hover {
+  color: #71a2ca;
+  transition: ease-in 0.2s;
+  font-size: 1.8rem;
+}
 
 /* All pages Setup */
 #home,
 #AllQoutes,
 #SearchQoutes,
-#SearchAuthors {
+#SearchAuthors,
+#RandomQuote {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -153,6 +161,18 @@ body {
   }
 }
 
+/* RandomQuote */
+#RandomQuote {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+.randombtn:hover {
+  cursor: pointer;
+  background-color: #71a2ca;
+  color: white;
+}
 /* Footer Section */
 #footer p {
   color: #fff;

@@ -5,6 +5,7 @@ import Home from "./Home";
 import SearchAuthors from "./SearchAuthors";
 import SearchQoutes from "./SearchQoutes";
 import Footer from "./Footer";
+import RandomQuote from "./RandomQuote";
 
 function App() {
   return (
@@ -22,12 +23,16 @@ function App() {
         <Link to={"/searchauthors"} className="navitems">
           Search Authors
         </Link>
+        <Link to={"/randomquote"} className="navitems">
+          Random Quote
+        </Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/allqoutes" element={<AllQoutes />} />
         <Route path="/searchqoutes" element={<SearchQoutes />} />
         <Route path="/searchauthors" element={<SearchAuthors />} />
+        <Route path="/randomquote" element={<RandomQuote />} />
       </Routes>
       <Footer />
     </>
