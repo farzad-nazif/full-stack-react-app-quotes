@@ -29,7 +29,6 @@ body {
 }
 .navitems:hover {
   color: #71a2ca;
-  transition: ease-in 0.2s;
   font-size: 1.8rem;
 }
 
